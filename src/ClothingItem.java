@@ -1,6 +1,11 @@
 import java.util.Random;
 
-class ClothingItem{
+/**
+ * Represents a clothing item with its city of production, age, fabric type, and price.
+ * Implements the {@link HasGField} interface to provide a method
+ * for retrieving a value associated with the clothing item.
+ */
+class ClothingItem implements HasGField {
 
     /** The city where the clothing item was produced. */
     String city;
@@ -30,7 +35,15 @@ class ClothingItem{
         this.price = price;
     }
 
-
+    /**
+     * Returns the price of the clothing item, which is used as the G-field value.
+     *
+     * @return the price of the clothing item
+     */
+    @Override
+    public double getGField() {
+        return this.price; // або інше поле, яке треба використовувати
+    }
 
     /**
      * Returns a string representation of the clothing item, including its city,

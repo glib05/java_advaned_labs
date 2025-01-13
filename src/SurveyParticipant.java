@@ -5,7 +5,7 @@ import java.util.Random;
  * name, and monthly income. Implements the HasGField interface to provide
  * access to a specific field for statistical calculations.
  */
-class SurveyParticipant{
+class SurveyParticipant implements HasGField {
 
     private String city;
     private int age;
@@ -27,6 +27,15 @@ class SurveyParticipant{
         this.monthlyIncome = monthlyIncome;
     }
 
+    /**
+     * Returns the value of the monthly income, which is used as the G field.
+     *
+     * @return the monthly income of the participant
+     */
+    @Override
+    public double getGField() {
+        return this.monthlyIncome; // або інше поле, яке треба використовувати
+    }
 
     /**
      * Returns the age of the participant.

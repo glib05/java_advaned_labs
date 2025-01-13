@@ -4,7 +4,7 @@ import java.util.Random;
  * Represents a mythical creature with attributes such as type, age, and attack power.
  * This class implements the HasGField interface to provide a method for retrieving the attack power.
  */
-class Creature {
+class Creature implements HasGField {
 
     private String type; // The type of the mythical creature
     private int yearsSinceFirstAppearance; // The number of years since the creature first appeared
@@ -23,7 +23,15 @@ class Creature {
         this.attackPower = attackPower;
     }
 
-
+    /**
+     * Returns the attack power of the creature, used for G-field calculations.
+     *
+     * @return the attack power of the creature
+     */
+    @Override
+    public double getGField() {
+        return this.attackPower; // or another field to use
+    }
 
     /**
      * Returns a string representation of the MythicalCreature object.
