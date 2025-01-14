@@ -7,7 +7,7 @@
 Новиков Гліб ІП-24
 
 Інструкції по збірці та запуску
-Клонуйте репозиторій:
+Клонуйте репозиторій: git clone https://github.com/glib05/java_advaned_labs.git
 
 git 
 cd <java_labs_advanced>
